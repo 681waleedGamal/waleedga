@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تأجير كراسي وطاولات الدمام | مستلزمات الحفلات والمناسبات</title>
-    <meta name="description" content="خدمات تأجير كراسي وطاولات في الدمام والمنطقة الشرقية. تأجير طاولات استقبال، كراسي، كنب، جلسات، حواجز وممرات. خصم 30% على التأجير.">
+    <title>تأجير كراسي وطاولات الدمام | أفضل خدمات تأجير مستلزمات الحفلات</title>
+    <meta name="description" content="تأجير كراسي وطاولات في الدمام والمنطقة الشرقية. طاولات استقبال، كراسي، كنب، جلسات، حواجز وممرات. خصم 30% على التأجير. خدمة 24 ساعة.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* الأساسيات */
@@ -197,64 +197,57 @@
             margin-bottom: 30px;
         }
         
-        /* الخدمات */
-        .services {
-            background-color: var(--light-color);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
+        /* محتوى مع صور */
+        .content-with-images {
             background-color: white;
+        }
+        
+        .content-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .content-block.reverse {
+            direction: ltr;
+        }
+        
+        .content-block.reverse .content-text {
+            direction: rtl;
+        }
+        
+        .content-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .content-text p {
+            margin-bottom: 20px;
+            color: var(--gray-color);
+        }
+        
+        .content-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .content-images img {
             border-radius: 8px;
-            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
         }
         
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-        
-        .service-content {
-            padding: 20px;
-        }
-        
-        .service-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-        
-        .service-content p {
-            color: var(--gray-color);
-            margin-bottom: 15px;
+        .content-images img:hover {
+            transform: translateY(-5px);
         }
         
         /* لماذا تختارنا */
         .why-us {
-            background-color: white;
+            background-color: var(--light-color);
         }
         
         .features {
@@ -271,8 +264,9 @@
         }
         
         .feature:hover {
-            background-color: var(--light-color);
+            background-color: white;
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
         .feature i {
@@ -289,7 +283,7 @@
         
         /* معرض الصور */
         .gallery {
-            background-color: var(--light-color);
+            background-color: white;
         }
         
         .gallery-grid {
@@ -314,35 +308,6 @@
         
         .gallery-item:hover img {
             transform: scale(1.1);
-        }
-        
-        /* حول الشركة */
-        .about {
-            background-color: white;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .about-text h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            color: var(--gray-color);
-        }
-        
-        .about-img {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
         /* اتصل بنا */
@@ -536,12 +501,16 @@
         
         /* التجاوب مع الشاشات الصغيرة */
         @media (max-width: 992px) {
-            .about-content, .contact-content {
+            .content-block, .contact-content {
                 grid-template-columns: 1fr;
             }
             
             .hero h1 {
                 font-size: 2.8rem;
+            }
+            
+            .content-images {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -601,9 +570,8 @@
             
             <ul class="nav-links">
                 <li><a href="#">الرئيسية</a></li>
-                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#why-us">لماذا نحن</a></li>
                 <li><a href="#gallery">معرض الصور</a></li>
-                <li><a href="#about">من نحن</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
             
@@ -622,70 +590,76 @@
         </div>
     </section>
 
-    <!-- الخدمات -->
-    <section id="services" class="section services">
+    <!-- محتوى مع صور - القسم 1 -->
+    <section class="section content-with-images">
         <div class="container">
-            <div class="section-title">
-                <h2>خدماتنا</h2>
-                <p>نقدم مجموعة واسعة من خدمات تأجير مستلزمات الحفلات والمناسبات في الدمام والمنطقة الشرقية</p>
+            <div class="content-block">
+                <div class="content-text">
+                    <h2>تأجير مستلزمات الحفلات</h2>
+                    <p>إذا كنت تخطط لأي مناسبة خاصة، فإن تأجير مستلزمات الحفلات هو الخيار الأمثل لضمان تجربة ناجحة ومميزة. من الطاولات والكراسي إلى أنظمة الصوت والديكورات، نحن نقدم لك كل ما تحتاجه لتجهيز مكان الحفل بطريقة محترفة وبأقل جهد ممكن.</p>
+                    <p>تأجير كراسي وطاولات للمناسبات. ايجار زل استقبال وطاولات عزائم. تاجير طاولات قزاز وسجاد احمر. خصم 30% علي تاجير كراسي وطاولات.</p>
+                </div>
+                <div class="content-images">
+                    <img src="https://i.postimg.cc/1zLgQJxK/b4539c14-f572-473c-9a55-0704560e9a9e.jpg" alt="تأجير طاولات وكراسي">
+                    <img src="https://i.postimg.cc/90cQmkLS/6bb0ef98-7e0c-4b63-aaa0-9905407cac05.jpg" alt="تأجير كراسي وطاولات">
+                </div>
             </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://i.postimg.cc/BvtDsjj0/97deb38b-db87-4de0-9494-560ff01b907a.jpg" alt="تأجير كراسي وطاولات">
-                    </div>
-                    <div class="service-content">
-                        <h3>تأجير كراسي وطاولات</h3>
-                        <p>إذا كنت تخطط لأي مناسبة خاصة، فإن تأجير مستلزمات الحفلات هو الخيار الأمثل لضمان تجربة ناجحة ومميزة. من الطاولات والكراسي إلى أنظمة الصوت والديكورات، نحن نقدم لك كل ما تحتاجه لتجهيز مكان الحفل بطريقة محترفة وبأقل جهد ممكن.</p>
-                        <a href="#contact" class="btn">اطلب الآن</a>
-                    </div>
+        </div>
+    </section>
+
+    <!-- محتوى مع صور - القسم 2 -->
+    <section class="section" style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="content-block reverse">
+                <div class="content-text">
+                    <h2>تاجير لوازم الحفلات</h2>
+                    <p>خدمات تاجير لوازم الحفلات لدينا تشمل مجموعة واسعة من الخيارات التي تناسب جميع أنواع الحفلات. سواء كنت تخطط لحفل زفاف، عيد ميلاد، أو أي مناسبة أخرى، نحن نوفر لك جميع الأدوات اللازمة بأعلى جودة وأفضل الأسعار.</p>
+                    <p>تاجير طاولات وكراسي للحفلات والمناسبات بالدمام خدمة 24 ساعة اتصل الان. ايجار كراسي وطاولات استقبال للحفلات والمناسبات والافراح خصم 30% علي تاجير كراسي وطاولات.</p>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://i.postimg.cc/PqrGqjH8/fb590054-ef5c-4931-af62-4eb7d70c85ca.jpg" alt="تأجير كنب">
-                    </div>
-                    <div class="service-content">
-                        <h3>تأجير كنب</h3>
-                        <p>خدمات تاجير لوازم الحفلات لدينا تشمل مجموعة واسعة من الخيارات التي تناسب جميع أنواع الحفلات. سواء كنت تخطط لحفل زفاف، عيد ميلاد، أو أي مناسبة أخرى، نحن نوفر لك جميع الأدوات اللازمة بأعلى جودة وأفضل الأسعار.</p>
-                        <a href="#contact" class="btn">اطلب الآن</a>
-                    </div>
+                <div class="content-images">
+                    <img src="https://i.postimg.cc/rFmqfx3k/3021717d-05d6-488c-8a6f-20398f266ff1.jpg" alt="تأجير طاولات استقبال">
+                    <img src="https://i.postimg.cc/Dfp9yDp8/0e6007f1-e6f6-4135-9845-85f068183d8f.jpg" alt="تأجير كراسي">
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://i.postimg.cc/Hnbv2ZHY/d726c01f-b1c9-44b8-b1c7-ddbb4088739b.jpg" alt="تأجير جلسات">
-                    </div>
-                    <div class="service-content">
-                        <h3>تأجير جلسات</h3>
-                        <p>محل تاجير لوازم افراح لدينا متخصص في تقديم كل ما يلزم لجعل يوم زفافك مميزًا. نحن نوفر طاولات مزينة بأجمل الأغطية، كراسي مريحة، أنظمة إضاءة رومانسية، وكل ما تحتاجه لتجهيز قاعة الزفاف بأفضل شكل.</p>
-                        <a href="#contact" class="btn">اطلب الآن</a>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- محتوى مع صور - القسم 3 -->
+    <section class="section content-with-images">
+        <div class="container">
+            <div class="content-block">
+                <div class="content-text">
+                    <h2>محلات تاجير لوازم الحفلات</h2>
+                    <p>عند البحث عن أفضل محلات تاجير لوازم الحفلات، تجد أن خدماتنا تتميز بالتنوع والجودة. نحن نتعامل مع محلات متخصصة تقدم لك كل ما تحتاجه لتحضير حفلة مثالية، من الأثاث الفاخر إلى أدوات الزينة المبهرة.</p>
+                    <p>تاجير سجاد استقبال وكوش للافراح باسعار مناسبة فروعنا جميع مناطق الشرقية اتصل بنا. تجهيز وتاجير طاولات استقبال فاخرة بالدمام للحفلات والمناسبات العامة والفاعليات اتصل بنا تاجير طاولات استقبال الدمام.</p>
+                </div>
+                <div class="content-images">
+                    <img src="https://i.postimg.cc/y6GGzRWc/df7e0e2f-835a-44de-b373-7ade5fdf9f93.jpg" alt="تأجير طاولات">
+                    <img src="https://i.postimg.cc/XNZbF4C7/6c19c493-f550-479d-9a76-c797e922545f.jpg" alt="تأجير كراسي مؤتمرات">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- لماذا تختارنا -->
-    <section class="section why-us">
+    <section id="why-us" class="section why-us">
         <div class="container">
             <div class="section-title">
-                <h2>لماذا تختار خدماتنا؟</h2>
+                <h2>لماذا تختار خدمات تأجير مستلزمات الحفلات لدينا؟</h2>
                 <p>نحن نتميز بتقديم أفضل خدمات تأجير مستلزمات الحفلات في الدمام والمنطقة الشرقية</p>
             </div>
             
             <div class="features">
                 <div class="feature">
-                    <i class="fas fa-star"></i>
-                    <h3>جودة ممتازة</h3>
-                    <p>نحن نضمن أن جميع منتجاتنا ذات جودة عالية ونظيفة وجاهزة للاستخدام.</p>
+                    <i class="fas fa-list"></i>
+                    <h3>تنوع الخيارات</h3>
+                    <p>نوفر مجموعة واسعة من المستلزمات لتلبية كافة احتياجاتك.</p>
                 </div>
                 
                 <div class="feature">
-                    <i class="fas fa-tags"></i>
-                    <h3>أسعار منافسة</h3>
-                    <p>نسعى دائمًا لتقديم أفضل الأسعار لضمان حصولك على القيمة مقابل المال.</p>
+                    <i class="fas fa-star"></i>
+                    <h3>جودة ممتازة</h3>
+                    <p>نحن نضمن أن جميع منتجاتنا ذات جودة عالية ونظيفة وجاهزة للاستخدام.</p>
                 </div>
                 
                 <div class="feature">
@@ -695,26 +669,61 @@
                 </div>
                 
                 <div class="feature">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>ضمان الجودة</h3>
-                    <p>جميع منتجاتنا تخضع لفحص دقيق قبل التوصيل لضمان جودتها.</p>
+                    <i class="fas fa-tags"></i>
+                    <h3>أسعار منافسة</h3>
+                    <p>نسعى دائمًا لتقديم أفضل الأسعار لضمان حصولك على القيمة مقابل المال.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- محتوى إضافي مع صور -->
-    <section class="section">
+    <!-- محتوى مع صور - القسم 4 -->
+    <section class="section" style="background-color: var(--light-color);">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>تأجير كراسي وطاولات للمناسبات</h2>
-                    <p>ايجار زل استقبال وطاولات عزائم. تاجير طاولات قزاز وسجاد احمر. خصم 30% علي تاجير كراسي وطاولات.</p>
-                    <p>تاجير طاولات وكراسي للحفلات والمناسبات بالدمام خدمة 24 ساعة اتصل الان. ايجار كراسي وطاولات استقبال للحفلات والمناسبات والافراح خصم 30% علي تاجير كراسي وطاولات.</p>
-                    <p>تاجير سجاد استقبال وكوش للافراح باسعار مناسبة فروعنا جميع مناطق الشرقية اتصل بنا. تجهيز وتاجير طاولات استقبال فاخرة بالدمام للحفلات والمناسبات العامة والفاعليات اتصل بنا تاجير طاولات استقبال الدمام.</p>
+            <div class="content-block reverse">
+                <div class="content-text">
+                    <h2>محل تاجير لوازم افراح</h2>
+                    <p>محل تاجير لوازم افراح لدينا متخصص في تقديم كل ما يلزم لجعل يوم زفافك مميزًا. نحن نوفر طاولات مزينة بأجمل الأغطية، كراسي مريحة، أنظمة إضاءة رومانسية، وكل ما تحتاجه لتجهيز قاعة الزفاف بأفضل شكل.</p>
+                    <p>تاجير كراسي وطاولات عزائم اتصل الان. تنسيق تجهيز افراح ومناسبات. تاجير كوش أفراح وسجاد بالدمام. ارقام محلات تاجيرطاولات وكراسي.</p>
                 </div>
-                <div class="about-img">
-                    <img src="https://i.postimg.cc/1zLgQJxK/b4539c14-f572-473c-9a55-0704560e9a9e.jpg" alt="تأجير طاولات وكراسي">
+                <div class="content-images">
+                    <img src="https://i.postimg.cc/PqrGqjH8/fb590054-ef5c-4931-af62-4eb7d70c85ca.jpg" alt="تأجير كنب">
+                    <img src="https://i.postimg.cc/Hnbv2ZHY/d726c01f-b1c9-44b8-b1c7-ddbb4088739b.jpg" alt="تأجير جلسات">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- محتوى مع صور - القسم 5 -->
+    <section class="section content-with-images">
+        <div class="container">
+            <div class="content-block">
+                <div class="content-text">
+                    <h2>محل تاجير حفلات</h2>
+                    <p>في محل تاجير حفلات، نحن نقدم حلول متكاملة لجميع أنواع المناسبات. نحن نوفر ديكورات، أثاث، معدات الصوت والإضاءة، وغيرها من الأدوات التي تجعل حفلتك ناجحة ومميزة بكل المقاييس.</p>
+                    <p>نحن ندرك أن لكل مناسبة خصوصيتها، لذا نوفر لك خدمات محل لوازم حفلات التي تشمل جميع المستلزمات الأساسية والاختيارية لتجهيز مكان الحفل بالطريقة التي ترغب بها. نحن نقدم خيارات مرنة تتناسب مع جميع الميزانيات والاحتياجات.</p>
+                </div>
+                <div class="content-images">
+                    <img src="https://i.postimg.cc/9QgbG5TT/af782760-5186-4bf9-a404-62bab7f872dd.jpg" alt="تأجير حواجز وممرات">
+                    <img src="https://i.postimg.cc/BvtDsjj0/97deb38b-db87-4de0-9494-560ff01b907a.jpg" alt="تأجير كراسي وطاولات">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- محتوى مع صور - القسم 6 -->
+    <section class="section" style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="content-block reverse">
+                <div class="content-text">
+                    <h2>تأجير كراسي مؤتمرات ومعارض</h2>
+                    <p>عند التفكير في تنظيم مناسبة خاصة أو مؤتمر أو حفل زفاف في الدمام، يصبح تجهيز المكان واحتياجات الضيوف من الأمور الأساسية. من هذا المنطلق، تأتي خدمة تاجير كراسي وطاولات في الدمام لتلبية هذه الاحتياجات بأمانة واحترافية.</p>
+                    <p>1. توفير الوقت والجهد: تأجير كراسي وطاولات في الدمام يقلل من العبء الشديد الذي يأتي مع شراء وتخزين هذه القطع الثقيلة بشكل دائم. ببساطة، يمكنك الحصول على ما تحتاجه وعندما تحتاجه دون عناء.</p>
+                    <p>2. مجموعة متنوعة من الخيارات: سواء كنت تخطط لمناسبة كبيرة أم صغيرة، ستجد مجموعة متنوعة من ايجاركراسي وطاولات المناسبة لاحتياجاتك. يمكنك اختيار التصميم واللون الذي يناسب موضوع حدثك.</p>
+                </div>
+                <div class="content-images">
+                    <img src="https://i.postimg.cc/90cQmkLS/6bb0ef98-7e0c-4b63-aaa0-9905407cac05.jpg" alt="تأجير كراسي وطاولات">
+                    <img src="https://i.postimg.cc/rFmqfx3k/3021717d-05d6-488c-8a6f-20398f266ff1.jpg" alt="تأجير طاولات استقبال">
                 </div>
             </div>
         </div>
@@ -730,6 +739,12 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item">
+                    <img src="https://i.postimg.cc/BvtDsjj0/97deb38b-db87-4de0-9494-560ff01b907a.jpg" alt="تأجير كراسي وطاولات">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/1zLgQJxK/b4539c14-f572-473c-9a55-0704560e9a9e.jpg" alt="تأجير طاولات وكراسي">
+                </div>
+                <div class="gallery-item">
                     <img src="https://i.postimg.cc/90cQmkLS/6bb0ef98-7e0c-4b63-aaa0-9905407cac05.jpg" alt="تأجير كراسي وطاولات">
                 </div>
                 <div class="gallery-item">
@@ -741,55 +756,6 @@
                 <div class="gallery-item">
                     <img src="https://i.postimg.cc/y6GGzRWc/df7e0e2f-835a-44de-b373-7ade5fdf9f93.jpg" alt="تأجير طاولات">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://i.postimg.cc/XNZbF4C7/6c19c493-f550-479d-9a76-c797e922545f.jpg" alt="تأجير كراسي مؤتمرات">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://i.postimg.cc/9QgbG5TT/af782760-5186-4bf9-a404-62bab7f872dd.jpg" alt="تأجير حواجز وممرات">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- محتوى إضافي -->
-    <section class="section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://i.postimg.cc/Dfp9yDp8/0e6007f1-e6f6-4135-9845-85f068183d8f.jpg" alt="تأجير كراسي وطاولات">
-                </div>
-                <div class="about-text">
-                    <h2>تأجير كراسي مؤتمرات ومعارض</h2>
-                    <p>عند التفكير في تنظيم مناسبة خاصة أو مؤتمر أو حفل زفاف في الدمام، يصبح تجهيز المكان واحتياجات الضيوف من الأمور الأساسية. من هذا المنطلق، تأتي خدمة تاجير كراسي وطاولات في الدمام لتلبية هذه الاحتياجات بأمانة واحترافية.</p>
-                    <p>1. توفير الوقت والجهد: تأجير كراسي وطاولات في الدمام يقلل من العبء الشديد الذي يأتي مع شراء وتخزين هذه القطع الثقيلة بشكل دائم. ببساطة، يمكنك الحصول على ما تحتاجه وعندما تحتاجه دون عناء.</p>
-                    <p>2. مجموعة متنوعة من الخيارات: سواء كنت تخطط لمناسبة كبيرة أم صغيرة، ستجد مجموعة متنوعة من ايجاركراسي وطاولات المناسبة لاحتياجاتك. يمكنك اختيار التصميم واللون الذي يناسب موضوع حدثك.</p>
-                    <p>3. الراحة والتنظيم: لدينا خدمة تأجير كراسي وطاولات، يمكنك توفير مقاعد مريحة للضيوف وتوزيع المساحة بشكل مناسب لتحقيق تجربة إيجابية.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- حول الشركة -->
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="section-title">
-                <h2>من نحن</h2>
-                <p>تعرف على شركتنا ورسالتنا في تقديم أفضل خدمات التأجير</p>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>محل تاجير حفلات متكامل</h2>
-                    <p>في محل تاجير حفلات، نحن نقدم حلول متكاملة لجميع أنواع المناسبات. نحن نوفر ديكورات، أثاث، معدات الصوت والإضاءة، وغيرها من الأدوات التي تجعل حفلتك ناجحة ومميزة بكل المقاييس.</p>
-                    <p>نحن ندرك أن لكل مناسبة خصوصيتها، لذا نوفر لك خدمات محل لوازم حفلات التي تشمل جميع المستلزمات الأساسية والاختيارية لتجهيز مكان الحفل بالطريقة التي ترغب بها. نحن نقدم خيارات مرنة تتناسب مع جميع الميزانيات والاحتياجات.</p>
-                    <p>4. تخصيص التصميم: تاجير كراسي وطاولات يتيح لك تخصيص التصميم الداخلي للمكان بشكل فريد، مما يجعل المناسبة تنعكس بأفضل طريقة ممكنة.</p>
-                    <p>5. تكلفة فعالة: تأجير كراسي وطاولات في الدمام غالبًا ما يكون أكثر تكلفة فعالة من شراء هذه القطع بشكل دائم، وخاصة إذا كانت مناسبتك مؤقتة.</p>
-                    <p>6. الاستفادة من الخبرة: متخصصون في تاجير كراسي وطاولات نمتلك الخبرة اللازمة لتقديم النصائح والإرشادات لتحقيق التنظيم المثالي.</p>
-                    <p>تأجير كراسي وطاولات في الدمام هو الخيار الذكي لتجهيز مناسباتك ومؤتمراتك بأسلوب أنيق ومريح. ابحث عن شركة موثوقة واحترافية لتحقيق نجاح حدثك بكل سهولة ويسر.</p>
-                </div>
-                <div class="about-img">
-                    <img src="https://i.postimg.cc/rFmqfx3k/3021717d-05d6-488c-8a6f-20398f266ff1.jpg" alt="من نحن">
-                </div>
             </div>
         </div>
     </section>
@@ -798,8 +764,8 @@
     <section id="contact" class="section contact">
         <div class="container">
             <div class="section-title">
-                <h2>اتصل بنا</h2>
-                <p>لا تتردد في التواصل معنا لجعل مناسبتك الخاصة تجربة لا تُنسى</p>
+                <h2>اتصل بنا الآن</h2>
+                <p>لا تتردد في التواصل معنا لجعل مناسبتك الخاصة تجربة لا تُنسى. نحن هنا لمساعدتك في كل خطوة من التخطيط إلى التنفيذ. اتصل بنا الآن للحصول على استشارة مجانية وعروض خاصة.</p>
             </div>
             
             <div class="contact-content">
@@ -888,9 +854,8 @@
                     <h3>روابط سريعة</h3>
                     <ul class="footer-links">
                         <li><a href="#">الرئيسية</a></li>
-                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#why-us">لماذا نحن</a></li>
                         <li><a href="#gallery">معرض الصور</a></li>
-                        <li><a href="#about">من نحن</a></li>
                         <li><a href="#contact">اتصل بنا</a></li>
                     </ul>
                 </div>
@@ -899,9 +864,9 @@
                     <h3>خدماتنا</h3>
                     <ul class="footer-links">
                         <li><a href="#">تأجير كراسي وطاولات</a></li>
-                        <li><a href="#">تأجير كنب</a></li>
-                        <li><a href="#">تأجير جلسات</a></li>
-                        <li><a href="#">تأجير سماعات</a></li>
+                        <li><a href="#">تأجير طاولات استقبال</a></li>
+                        <li><a href="#">تأجير كراسي مؤتمرات</a></li>
+                        <li><a href="#">تأجير كنب وجلسات</a></li>
                         <li><a href="#">تأجير حواجز وممرات</a></li>
                     </ul>
                 </div>
