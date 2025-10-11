@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.lama24.com/sitemap.xml
+Sitemap: https://lama24.com/sitemap.xml
